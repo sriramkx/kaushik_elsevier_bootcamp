@@ -1,0 +1,48 @@
+mongodb is a document oriented database program, classified as Nosql database program , 
+it is json like document with optional schemas
+
+
+
+create database - use database_name;
+
+switch database - use database_name;
+
+creating collection - db.createcCollection('collection name');
+
+adding document - db.collectionname.insert({object})
+
+to find data - db.collectionname.find()
+
+to update- db.collectionname.update({key},{$set:{object}})
+
+to remove - db.collectionname.remove({object})
+
+
+==============================================================
+
+mongodb
+
+db -database
+table- collections
+row -document
+col-key
+
+
+
+
+db.dinnerreserve.insertOne({
+  title: "Post Title 1",
+  body: "Body of post.",
+  category: "News",
+  likes: 1,
+  tags: ["news", "events"],
+  date: Date()
+})
+
+
+
+
+
+
+
+

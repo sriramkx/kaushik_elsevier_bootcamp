@@ -1,0 +1,50 @@
+website - collection of webpages 
+and multimedia packages
+
+static
+dynamic
+
+
+html css javascript bootstrap jquery 
+
+mysql php
+
+
+json api ajax
+
+
+----------------------------------
+
+
+mern  - mongodb expressjs reactjs nodejs
+
+mean stack - mongodb expressjs angularjs nodejs
+
+reactnative
+
+webapp
+
+-----------------------------------
+
+python
+
+django - ecommerce
+
+flask - ecommerce with machine learning model
+-----------------------------------------------
+
+iot , embedded , machine leaning / deep learning 
+
+
+---------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+
+
+open cmd - type mongosh
+
+1,  use school -  create database
+
+2,show databases
+
+3, db.createCollection('sectionA') - to create collection
+
+4,db.sectionA.insert({name:'john',age:16})
+
+5,db.sectionA.insert({name:'david',age:17})
+
+6,db.sectionA.find()

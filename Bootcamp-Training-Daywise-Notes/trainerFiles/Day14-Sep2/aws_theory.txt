@@ -1,0 +1,52 @@
+1. Virtualization Basics
+Virtualization is the process of creating a 
+virtual version of something, like a server,
+ storage device, or network resources. 
+Instead of having a physical machine for
+ every server or application, virtualization 
+allows multiple virtual machines (VMs) to run on a single physical machine. This makes it more efficient to use hardware resources.
+
+2. RDB Cloud Fundamentals
+These are the fundamental cloud computing models that describe how cloud services are delivered:
+
+SaaS (Software as a Service): In this model, the software is provided over the internet, and you don't need to install or manage it. Example: Gmail, Microsoft Office 365.
+PaaS (Platform as a Service): Provides a platform and environment to allow developers to build applications and services over the internet. Example: Google App Engine, AWS Elastic Beanstalk.
+IaaS (Infrastructure as a Service): Provides virtualized computing resources over the internet. This includes servers, storage, and networks. Example: AWS EC2, Google Compute Engine.
+
+3. Private / Public / Hybrid Clouds
+Private Cloud: Cloud resources are used exclusively by one business or organization. It provides greater control and security but can be more expensive.
+Public Cloud: Cloud resources are owned and operated by a third-party cloud service provider and delivered over the internet. It is cost-effective but less secure.
+Hybrid Cloud: Combines private and public clouds, allowing data and applications to be shared between them. It provides more flexibility and optimization.
+
+4. Storing in AWS
+AWS (Amazon Web Services) provides various storage services:
+
+S3 Buckets (Simple Storage Service): 
+An object storage service that can store 
+and retrieve any amount of data from anywhere.
+RDS (Relational Database Service): 
+A managed database service that supports 
+several database engines like MySQL, PostgreSQL, 
+and Oracle.
+EC2 (Elastic Compute Cloud): 
+Provides scalable computing capacity in the cloud.
+ You can launch virtual servers as needed.
+VPC (Virtual Private Cloud): 
+A logically isolated section of AWS 
+where you can launch AWS resources in a 
+virtual network that you define.
+EBS (Elastic Block Store): 
+Provides block-level storage volumes for use 
+with EC2 instances. It is like a hard drive in the cloud.
+
+5. AWS CloudFront
+AWS CloudFront is a Content Delivery Network (CDN) that securely delivers data, videos, applications, and APIs to users with low latency and high transfer speeds. It caches content at various edge locations globally to speed up delivery.
+
+6. DynamoDB Overview
+Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. It's a great choice for applications that require low latency at any scale, such as mobile apps, gaming, and IoT.
+
+7. CloudFormation
+AWS CloudFormation is a service that gives developers and businesses an easy way to create and manage a collection of related AWS resources. You define what your infrastructure looks like using a template (in JSON or YAML), and CloudFormation takes care of provisioning and configuring those resources for you.
+
+8. AWS Command Line Interface (CLI)
+The AWS CLI is a unified tool to manage your AWS services. With just one tool to download and configure, you can control multiple AWS services from the command line and automate them through scripts.

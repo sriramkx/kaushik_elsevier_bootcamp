@@ -1,0 +1,81 @@
+node js :
+
+
+npx and npm 
+
+node package runner
+node package manager
+
+modules - library 
+
+1, core module
+2, local module - user defined 
+3, third party module - bootstrap jquery 
+
+
+----------------------------------------
+
+react js or angular js
+
+npx create-react-app appname
+
+cd appname 
+
+npm start
+
+
+
+compomnent 
+
+class and function
+
+logic , reusable
+
+
+rce - class component
+rfce - function component
+
+
+--------------------------------------
+
+create react project in projectname
+
+1, place the css ,images ,
+ js folder inside public folder in the 
+name called assets
+
+2, go to src - index.html 
+replace the head and body html script 
+
+
+3, go to src - create foldername - pages - home.js header.js
+footer.js
+
+4.import the header.js home.js in app.js
+
+
+<Fragment></Fragment>
+----------------------------------------
+
+close all the tagss
+
+no comments - give comment line in jsx
+
+for<br/>
+
+try to replace the class to className
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

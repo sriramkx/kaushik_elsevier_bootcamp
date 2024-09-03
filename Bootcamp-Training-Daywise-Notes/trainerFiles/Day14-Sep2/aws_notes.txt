@@ -1,0 +1,125 @@
+open aws 
+
+console home - ec2 
+create instance 
+
+running instance (0)
+
+launch instances
+
+name - server1
+
+amazon machine imagw - ubuntu
+
+double check - t2 micro 
+
+key pair - blank
+
+network settings
+
+allow ssh
+
+launch instance
+
+2, proceed without key pair
+
+---- done 
+
+view instances
+
+once running we can start
+
+2/2 checks passed
+
+----------
+
+select the server2 and connect 
+
+ec2 instance connect
+
+and connect
+
+code:
+
+clear
+
+sudo apt-get update
+
+git clone https://github.com/yeshwanthlm/django-on-ec2.git
+
+ls -lrt 
+
+projectname django-on-ec2
+
+cd projectname
+
+cd django-on-ec2
+
+clear
+
+sudo apt install python3-pip -y
+
+do all the procedures in document
+pip3 --version
+pip3 install django
+
+
+type:
+
+python manage.py runserver 0.0.0.0:8000
+
+go to running instances
+
+select the instance
+
+public ipv4 address - right click open
+
+http:3.129.18.15:8000
+
+inbound root access to 8000
+
+select the instances 
+
+security - 
+inbound 
+outbound 
+
+security groups wizard2
+
+edit inbound rules
+
+custom tcp - 8000
+
+custom - anywhere
+
+save rules
+
+
+
+----------------------
+
+ubuntu 
+
+sudo yum update -y
+sudo yum install git -y
+sudo yum install python3 -y
+
+sudo yum install python3-pip -y
+pip3 --version
+python --version
+
+pip3 install django or sudo pip3 install django
+django-admin --version
+python3 manage.py runserver 0.0.0.0:8000
+
+
+
+
+
+
+
+
+
+
+
+

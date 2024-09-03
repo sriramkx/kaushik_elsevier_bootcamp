@@ -1,0 +1,10 @@
+solution for certificate issue when installing react:
+
+1.zscalar -->private access --> service--> Turn off
+2.go to a cmd
+3.run npx create-react-app my-app
+4.If you get certification error-run( npm config set strict-ssl=false )
+5.rerun the npx command if you get path error C:\Users\isaacjeyakumarj\AppData\Roaming\npm go to roaming path and create a new folder npm
+6.run npx command now
+
+_________________________________________________________________________

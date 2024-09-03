@@ -1,0 +1,22 @@
+
+open cmd and type mongosh
+
+update mongodb
+
+1,show databases
+
+2, use school
+
+3,show collections
+
+4, db.sectionA.find()
+
+5, db.sectionA.update({name:'john'},{$set:{age:15}})
+
+6, db.sectionA.find()
+
+
+7, db.sectionA.update({age:17},{$set:{name:'bob'}})
+
+
+8, db.sectionA.find()

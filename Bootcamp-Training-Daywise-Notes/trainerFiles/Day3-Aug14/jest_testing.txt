@@ -1,0 +1,69 @@
+How to test React App using Jest
+Jest is a well-liked testing tool that makes
+ it simple to test JavaScript applications, 
+particularly those created using JavaScript-based 
+frameworks like React.
+It is an open-source technology that 
+has won the trust of many developers 
+and is supported by the tech giant Facebook. 
+
+step1:
+
+create a react project - npx create-react-app basic-app
+
+cd basic app
+
+npm run 
+npm start
+
+
+Step 2: Configure Jest into your project
+
+Install react-test-renderer with the following command to render the JavaScript objects without DOM.
+
+npm install react-test-renderer
+
+npm install --save-dev jest
+
+
+Step 3: Create a React application to perform testing
+
+Let’s create a React application for which we will write multiple tests using Jest. 
+
+Write the following code inside the directory:
+
+basic-app/src/components/HelloWorld.js.
+
+
+import React from 'react'
+
+function HelloWorld() {
+  return (
+    <div>
+        <h1>
+            Hello World
+        </h1>
+    </div>
+  )
+}
+
+export default HelloWorld
+
+Also, update the basic-app/src/App.js file with the following script. 
+
+import React, { Component } from 'react';
+import HelloWorld from './components/HelloWorld';
+
+class App extends Component {
+  render() {
+    return (
+      <HelloWorld/>
+    );
+  }
+}
+
+export default App;
+
+After you have written the test file, follow the command to run the test on the root directory of your project ./basic-app.
+
+npm test

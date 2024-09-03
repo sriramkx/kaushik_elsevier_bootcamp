@@ -1,0 +1,34 @@
+jquery - minified javascript version
+
+json - from f.e to b.e 
+
+array + objects
+
+[] + {}
+
+json.stringify() - f.e to b.e
+
+json.parse() - b.e to f.e
+
+
+api - application program interface 
+
+var obj ={first:'john',lname:'smith'}
+
+obj.first()
+
+var obj = ['john','smith']
+
+obj[0]
+
+[{},{},{}]
+
+
+
+
+
+
+
+
+
+

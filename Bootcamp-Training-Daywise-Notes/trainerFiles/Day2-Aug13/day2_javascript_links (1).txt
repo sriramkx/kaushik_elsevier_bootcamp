@@ -1,0 +1,16 @@
+javascript w3schools howto
+jsfiddle 
+stackoverflow
+codepen
+github
+------------------------
+slider
+pop form
+responsive menubar
+accordion
+tabs
+scroll to top
+fixed socialbar
+pagination
+modal box
+image fade , 

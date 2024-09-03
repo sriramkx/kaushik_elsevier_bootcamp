@@ -1,0 +1,86 @@
+Step 1: Install Apache Kafka
+Download Kafka:
+
+Download the Kafka binaries from the official website.
+Extract the downloaded file to a directory of your choice.
+Start Zookeeper: Kafka requires Zookeeper to run, which comes bundled with Kafka.
+
+Navigate to the Kafka directory and run the following command:
+
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+Start Kafka Broker:
+
+Open another terminal window, navigate to the Kafka directory, and start the Kafka broker:
+
+bin/kafka-server-start.sh config/server.properties
+
+Step 2: Set Up Your Python Environment
+Install Required Python Packages:
+You will need the kafka-python package to interact with Kafka from Python.
+Install it using pip:
+
+pip install kafka-python
+
+
+Step 3: Create a Kafka Producer
+Write the Producer Script:
+
+Create a Python script named producer.py.
+Use the following code to produce messages to a Kafka topic:
+
+from kafka import KafkaProducer
+import json
+
+producer = KafkaProducer(
+    bootstrap_servers='localhost:9092',
+    value_serializer=lambda v: json.dumps(v).encode('utf-8')
+)
+
+for i in range(10):
+    message = {'number': i}
+    producer.send('test-topic', message)
+    print(f'Sent: {message}')
+
+producer.flush()
+producer.close()
+Run the Producer Script:
+
+Execute the script:
+
+python producer.py
+This will send 10 messages to the Kafka topic test-topic.
+Step 4: Create a Kafka Consumer
+Write the Consumer Script:
+
+Create a Python script named consumer.py.
+Use the following code to consume messages from the Kafka topic:
+
+from kafka import KafkaConsumer
+import json
+
+consumer = KafkaConsumer(
+    'test-topic',
+    bootstrap_servers='localhost:9092',
+    auto_offset_reset='earliest',
+    value_deserializer=lambda x: json.loads(x.decode('utf-8'))
+)
+
+for message in consumer:
+    print(f"Received: {message.value}")
+Run the Consumer Script:
+
+Execute the script:
+
+python consumer.py
+
+This will read and print messages from the test-topic.
+Step 5: Test the Setup
+Run the Producer and Consumer:
+Ensure that both Kafka and Zookeeper are running.
+First, start the consumer.py script, and then run the producer.py script.
+The consumer should print the messages produced by the producer.
+Step 6: Clean Up
+Stop Kafka Broker and Zookeeper:
+To stop the Kafka broker, use Ctrl+C in the terminal where it's running.
+Similarly, stop the Zookeeper server.

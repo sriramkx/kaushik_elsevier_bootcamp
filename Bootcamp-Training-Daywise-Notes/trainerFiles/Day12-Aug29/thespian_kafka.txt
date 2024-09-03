@@ -1,0 +1,20 @@
+Thespian PyPI is a Python library for 
+building concurrent,
+distributed, fault-tolerant
+applications using the actor model. 
+It helps you create actors that can handle 
+specific tasks, communicate asynchronously, 
+and manage state independently. 
+It's mainly used for scenarios where you need to
+ manage multiple tasks concurrently, 
+scale across distributed systems, 
+and ensure fault tolerance.
+
+Kafka, on the other hand, 
+is a distributed event streaming platform. 
+It's used for building real-time data pipelines
+and streaming applications. 
+Kafka handles high-throughput, 
+low-latency data streams and 
+is often used for log aggregation,
+messaging, and event sourcing.

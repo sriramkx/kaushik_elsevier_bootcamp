@@ -1,0 +1,188 @@
+html : hypertext markup language
+
+<p></p> - tag
+
+body structure:
+
+
+<!DOCTYPE html> - dtd - document typedefinition
+<head>
+<title></title>
+<meta></meta>
+<link></link> - css 
+<script></script> - js
+
+</head>
+
+
+<body>
+
+
+
+</body>
+
+
+
+
+</html>
+
+
+heading
+
+
+
+h1 
+h2
+h3
+h4 
+h5 
+h6
+
+<img attributes>innerHTML</img>
+
+
+
+<img src=""></img>
+
+path directory:
+
+foldername/filename.ext
+
+
+winrar
+
+7zip
+
+----------------------------------------------------------
+
+css - cascade stylesheet
+
+1, inline
+2, internal
+3, external
+
+
+id class
+
+id - unique #
+class = group .
+
+-------------------
+
+1, color : red ;
+prop name : prop value; - applys for text
+
+2, background-color:orange;
+
+
+black #000000
+white #ffffff
+
+div
+
+3, float: left right
+
+4, text-align:left right center justify
+
+5,text-decoration:underline none
+
+6, text-tansform:uppercase lowercase capitialize Animal
+
+7,border:1px solid red; dotted .... dashed ----
+
+8,border-width:0px 1px 0px 1px 
+                top right bottom left
+
+9,border-radius:5px;
+rectangle - circle  - 50%
+
+10,padding: 1em (all)   - space inside div
+             1em 2em (tb lr)
+             1em 2em 3em 4em t r b l
+
+11,margin: 1em (all)   - space outside div
+             1em 2em (tb lr)
+             1em 2em 3em 4em t r b l
+
+
+12,letter-spacing:
+
+13,word-spacing:
+
+14,line-height:
+
+15, width: % em px rem - % is best
+
+
+16, height:
+---------------------------
+
+div - float width
+
+
+font-family:
+font-size:
+font-weight:
+
+background-image:url('');
+background-repeat:repeat no-repeat
+background-size:100% 100%
+
+------------------------------------
+
+var a;
+
+
+var a="javascript"
+       01234
+
+console.log(a.length())
+
+
+
+priya@gmail.com
+[a-zA-Z0-9]
+
+
+
+
+age = 18.5years
+parseInt()
+parseFloat()
+if age>18{
+
+}
+
+else{}
+
+
+
+
+
+
+
+12.56
+
+13
+
+floor 
+
+12
+ceil 
+
+12.111
+
+13
+
+var a=10
+var b=20
+
+var db=[10,20,30,40]
+
+db.fill('test')
+         0  1  2  3
+
+
+
+()=>{}
+
