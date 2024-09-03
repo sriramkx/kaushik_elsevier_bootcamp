@@ -1,0 +1,53 @@
+1. Introduction to Testing in Python
+Before diving into examples, it's important to understand the basics of testing:
+
+Unit Testing: A method of testing individual 
+units of code (like functions or methods) 
+to ensure they work as expected.
+PyTest: A popular testing framework in Python 
+that makes it easy to write and execute tests.
+UnitTest: The built-in Python module for testing, 
+inspired by Java's JUnit.
+
+
+2. Setting Up the Environment
+Install PyTest:
+
+
+pip install pytest
+
+Create a Sample Python Project: Create a directory structure like this:
+
+
+my_project/
+├── main.py
+└── test_main.py
+
+3. Writing Test Cases Using UnitTest
+Write a Simple Function in main.py:
+
+
+# main.py
+def add(x, y):
+    return x + y
+Create a Test Case in test_main.py:
+
+
+# test_main.py
+import unittest
+from main import add
+
+class TestMain(unittest.TestCase):
+
+    def test_add(self):
+        self.assertEqual(add(2, 3), 5)
+        self.assertEqual(add(-1, 1), 0)
+        self.assertEqual(add(-1, -1), -2)
+
+if __name__ == '__main__':
+    unittest.main()
+Run the Test: Run the test_main.py file:
+
+
+python test_main.py
+The output should show the test results, indicating success or failure.

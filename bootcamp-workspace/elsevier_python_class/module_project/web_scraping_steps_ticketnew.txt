@@ -1,0 +1,35 @@
+import requests
+import pandas
+from bs4 import BeautifulSoup
+
+r = requests.get("https://ticketnew.com/movies/chennai")
+c = r.content
+c
+soup = BeautifulSoup(c, "html.parser")
+print(soup.prettify())
+#DesktopRunningMovie_movieCard__p5n6P
+all = soup.find_all("div", {"class":"DesktopRunningMovie_movieCard__p5n6P"})
+print(all)
+
+print(len(all))
+all[0]
+all[0].find_all("div",{"class":"DesktopRunningMovie_movTitle__Q1pOY"} )
+all[0].find_all("div", {"class":"DesktopRunningMovie_point__YtD_w"})
+
+all[0].find_all("div", {"class":"MovieSentimentCount_redHeartSolid__IgHjb"})
+
+for item in all:
+    print(item.find_all("div",{"class":"DesktopRunningMovie_movTitle__Q1pOY"} )[0].text)
+    print(item.find_all("div", {"class":"DesktopRunningMovie_point__YtD_w"})[0].text)
+	
+	movies=[]
+for item in all:
+    movie={}
+    movie['Title']=item.find_all("div",{"class":"DesktopRunningMovie_movTitle__Q1pOY"} )[0].text
+    movie['Language_Rating']=item.find_all("div", {"class":"DesktopRunningMovie_point__YtD_w"})[0].text
+    movies.append(movie)
+movies
+
+df = pandas.DataFrame(movies)
+
+df.to_csv("movieList.csv")
