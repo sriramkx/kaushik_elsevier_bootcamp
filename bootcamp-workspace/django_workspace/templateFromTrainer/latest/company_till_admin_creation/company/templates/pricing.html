@@ -1,0 +1,14 @@
+{% extends 'layouts.html' %}
+
+{% load static %}
+
+{% block 'mainsection' %}
+
+<main style="text-align:center">
+    <h1>{{product.prodName}}</h1>
+    <h2>{{product.price}}</h2>
+    <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img src="{{product.image.url}}">
+    </div>
+    <!-- <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img src="{{about.image.url}}"></div> -->
+
+    {% endblock %}
