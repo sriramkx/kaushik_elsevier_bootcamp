@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+    
+    var obj1 = {pdtName:"Sony", pdtCode:342342}; // Literal method
+
+    var obj2 = new Object(); // {}  // Bu using new keyword
+
+    obj2.name = "gopi";
+
+    obj2.age = 56;
+
+    console.log(obj2);
+
+
+    function Student(name, std, total)
+    {
+        this.stdName = name;
+        this.stdStd = std;
+        this.stdTotal = total;
+
+        this.stdSchool = "ICI";
+
+        this.fullDetails = function()
+        {
+            return this.stdName+", "+this.stdStd+", "+this.stdTotal;
+        }
+
+    }
+
+    var std1 = new Student("Gopi", "10th", "478");
+
+    var std2 = new Student("Raja", "12th", "789");
+
+    std1.address = "chennai";
+
+    std1.getTotal = function()
+    {
+        return this.stdTotal;
+    }
+
+    alert(std1.address);
+
+    alert(std1.getTotal());
+
+    alert(std1.fullDetails());
+
+    alert(std2.fullDetails());
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

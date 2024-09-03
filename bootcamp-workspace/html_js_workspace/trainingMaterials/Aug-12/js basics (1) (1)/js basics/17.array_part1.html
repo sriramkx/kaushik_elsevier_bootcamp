@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array - part1</title>
+    <script>
+        console.clear()
+
+
+var mFriends = ['Shaw', 'Clara', 'Vab', 'Kun', 'Jacob', 'Dina']
+// console.log(mFriends)
+// console.log(typeof(mFriends))
+
+// console.log(mFriends[2])
+// console.log(mFriends[0])
+// console.log(mFriends[4])
+
+// // Update a value
+// mFriends[0] = 'Shawn'
+// console.log(mFriends)
+
+// // Add more items
+// mFriends[6] = 'Alan'
+// console.log(mFriends)
+
+// mFriends[10] = 'Tiffany'
+// console.log(mFriends)
+
+// mFriends[mFriends.length] = 'Rob'
+// console.log(mFriends)
+
+// mFriends.push('Jack')
+// console.log(mFriends)
+
+// // Delete a value
+// var mName = mFriends.pop()
+// console.log(mName)
+// console.log(mFriends)
+// var mName = mFriends.pop()
+// console.log(mName)
+// console.log(mFriends)
+// var mName = mFriends.pop()
+// console.log(mName)
+// console.log(mFriends)
+// var mName = mFriends.pop()
+// console.log(mName)
+// console.log(mFriends)
+
+
+
+
+// Answer the following questions and run the code in Codepen.
+// Q1. Write a JavaScript program to find the longest string from a given array.
+// Sample Data
+// Input:
+// Array: ['asdf', 'sd', 'something','right','position']
+var mainArr = ['asdf', 'sd', 'something','right','position']
+var strLengthArr = []
+var longestStringLength = 0
+var longStringPos = 0
+for (let i = 0; i < mainArr.length; i++) {
+    const element = mainArr[i];  
+      strLengthArr.push(element.length)
+    if (element.length > longestStringLength){
+        longestStringLength = element.length
+    }    
+}
+console.log("Longest String in array : " + mainArr[strLengthArr.indexOf(longestStringLength)])
+
+// Output:
+// "Longest String in array : something "
+
+
+
+// Q2. Write a JavaScript program to remove '0', false, undefined, null, NaN, '' from given array.
+// Sample Data
+// Input:
+// Array: [NaN, 0, 15, false, -22, '',undefined, 47, null,94]
+var mainArr = [NaN, 0, 15, false, -22, '',undefined, 47, null,94]
+var newArr = []
+for (let i = 0; i < mainArr.length; i++) {
+    const element = mainArr[i];
+    if(element > 0 || element < 0){
+        newArr.push(element)
+    }    
+}
+console.log(newArr)
+// Output:
+// [15, -22, 47, 94]
+
+
+// Q3. Write a JavaScript code to divide a given array of positive integers into two parts. First element goes to first part, second element goes to second part, and third element goes to first part and so on.
+// Now compute the sum of two parts and store into an array of size two.
+// Sample Data
+// Input:
+// Array: [1, 3, 6, 2, 5, 10]
+var mainArr = [1, 3, 6, 2, 5, 10]
+var subArr1 = []
+var subArr2 = []
+var newArr = []
+var totalSubArr1 = 0
+var totalSubArr2 = 0
+for (let i = 0; i < mainArr.length; i++) {
+    const element = mainArr[i];
+    if(i%2 === 0){
+        subArr1.push(element)
+    }
+    else{
+        subArr2.push(element)
+    }    
+}
+for (let i = 0; i < subArr1.length; i++) {
+    totalSubArr1 += subArr1[i];
+}
+for (let i = 0; i < subArr2.length; i++) {
+    totalSubArr2 += subArr2[i];
+}
+newArr.push(totalSubArr1, totalSubArr2)
+console.log(newArr)
+// Output:
+// [12, 15]
+
+
+// Q4. Write a JavaScript program to check whether there is at least one element which occurs in two given sorted arrays of integers.
+// Sample Data
+// Input 1:
+arr1 = [1,2,3];
+arr2 = [3,4,5];
+// Input 2:
+// arr1 = [1,2,3];
+// arr2 = [4,5,6];
+var commonPresence = false
+for (let i = 0; i < arr1.length; i++) {
+    const element = arr1[i];
+    if(arr2.includes(element)){
+        commonPresence = true;
+    }    
+}
+console.log(commonPresence)
+
+// Output 1:
+// True
+// Output 2:
+// False
+
+
+// Q5. Write a JavaScript function to find the difference of two arrays.
+// Sample Data
+// Input:
+arr1=[1, 2, 3]; arr2=[100, 2, 1, 10]
+var diffArr = []
+for (let i = 0; i < arr1.length; i++) {
+    const element = arr1[i];
+    if(!arr2.includes(element)){
+        diffArr.push(element)
+    }    
+}
+for (let i = 0; i < arr2.length; i++) {
+    const element = arr2[i];
+    if(!arr1.includes(element)){
+        diffArr.push(element)
+    }    
+}
+console.log(diffArr)
+
+// Output:
+// [3, 100, 10]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

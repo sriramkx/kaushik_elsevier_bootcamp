@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+    
+    var users = ["gopi", "arun", "bala", "kamal", "raja"];
+
+   //alert(users.sort());
+
+  // alert(users.reverse());
+
+  //alert(users.sort().reverse());
+
+  var marks = [20, 10, 35, 0, 100, 44];
+
+  /*alert(marks.sort(function(a, b){
+
+return a - b;
+  }));*/ 
+
+
+  alert(marks.sort(function(a, b){
+
+      console.log(a, b);
+
+      return b - a;
+  }))
+
+
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

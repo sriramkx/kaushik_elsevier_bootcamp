@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string - inbuilt function part1</title>
+    <script>
+
+console.clear()
+
+var myFirstString = "This is a string for Javascript string functions, Javascript"
+
+// Returns the length of the string
+console.log(myFirstString.length)
+
+// Find index of a string inside another string
+console.log(myFirstString.indexOf('Javascript'))
+console.log(myFirstString.indexOf('This'))
+
+// Find LAST index of a string inside another string
+console.log(myFirstString.lastIndexOf('Javascript'))
+console.log(myFirstString.lastIndexOf('This'))
+
+// Get a part of our string slice(start, end)
+console.log(myFirstString.slice(0, 4))
+console.log(myFirstString.slice(21, 31))
+console.log(myFirstString.slice(-10))
+console.log(myFirstString.slice(5))
+
+// Get sub string function - substr(startPos, length)
+console.log(myFirstString.substr(0, 4))
+console.log(myFirstString.substr(21, 10))
+console.log(myFirstString.substr(21))
+
+// Q. Answer the following questions. Also, explain why do you think that your answer is correct.
+// var mStr = "This is my test string to practice the JavaScript string function concepts. This is gonna be fun.";
+// console.log(mStr.substr(-12))
+// 1. Find the length of the first sentence in the string.                  -   mStr.indexOf('.')+1                             -   75 including period.
+// 2. Find the length of the second sentence in the string.                 -   mStr.lastIndexOf('.') - mStr.indexOf('.')+1     without trialing space and including the end period.
+// 3. Find the first and last occurrence of the word "This".                -   First: 0 : mStr.index('This');  Last: 76 : mStr.lastIndex('This').
+// 4. Find the sub-string with length 12 from the START of the string mStr. -   This is my t    -  mStr.substr(0,12) 
+// 5. Find the sub-string with length 12 from the END of the string mStr.   -   onna be fun.   -   mStr.substr(-12)
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

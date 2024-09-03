@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+    <script>
+        console.clear();
+        // normal function using template strings
+
+        function greetings(name){
+            return `welcome ${name}`
+
+        }
+
+         console.log(greetings('john new'))
+
+         // arrow function using template strings
+
+         const myGreetings = (name) =>{
+            return `welcome ${name}`
+
+
+         }
+
+         //anther type 
+
+         const myGreetings1 = name =>{
+            return `welcome ${name}`
+
+
+         }
+         console.log(myGreetings1('type1'));
+
+
+//anther type 2
+
+const myGreetings2 = name => `welcome ${name}`
+
+
+         console.log(myGreetings2('type2'));
+
+
+         // multiple arguments
+         const myGreetings123 = (name,age) =>{
+            return `welcome ${name} ${age}`
+
+
+         }
+
+         console.log(myGreetings('shinchan'));
+         console.log(myGreetings123('shinchan','25'));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

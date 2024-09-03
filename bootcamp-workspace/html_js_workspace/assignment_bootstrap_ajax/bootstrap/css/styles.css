@@ -1,0 +1,9 @@
+body {
+    padding-top: 56px; /* Space for fixed navbar */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

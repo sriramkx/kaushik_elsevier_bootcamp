@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #book-results {
+            margin-top: 20px;
+        }
+
+        .book {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: inline-block;
+            max-width: 600px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Book Finder</h1>
+    <input type="text" id="search-query" placeholder="Enter book title">
+    <button id="search-books">Search</button>
+    <div id="book-results"></div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

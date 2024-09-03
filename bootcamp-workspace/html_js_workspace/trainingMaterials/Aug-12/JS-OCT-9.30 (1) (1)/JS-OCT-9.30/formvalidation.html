@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+    function doValidation()
+    {
+        // document.formName.InputElementName.value
+
+       // alert(document.reg.uname.value);
+
+       var form = document.reg;
+
+    //alert(form.uname.value.trim());
+
+       if(form.uname.value.trim()=="")
+       {
+           alert("please enter username");
+           form.uname.value = '';
+
+           form.uname.focus();
+
+           return false;
+       }
+
+       if(form.upass.value.trim()=="")
+       {
+           alert("plese enter password");
+           form.upass.focus();
+
+           return false;
+       }
+
+       if(form.upass.value!=form.ucpass.value)
+       {
+           alert("password & confirm password should be same");
+
+           form.upass.value = '';
+           form.ucpass.value = '';
+
+           form.upass.focus();
+
+           return false;
+       }
+
+       
+
+       if(!form.uemail.value.match(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/))
+       {
+           alert("Please enter vaid email");
+           form.uemail.focus();
+
+           return false;
+       }
+
+       if(form.uphone.value=="")
+       {
+           alert("please enter phone no");
+           form.uphone.focus();
+
+           return false;
+       }
+
+       if(isNaN(form.uphone.value))
+       {
+           alert("Please enter nos only");
+
+           form.uphone.focus();
+            form.uphone.value = '';
+           return false;
+       }
+
+       if(form.uphone.value.length!=10)
+       {
+           alert("Phone nos should be 10 characters");
+        form.uphone.focus();
+           // form.uphone.value = '';
+           return false;
+
+       }
+
+       var gender = document.getElementsByName("gen");
+
+       // alert(gender.length);
+       
+       var isChecked = false;
+
+       for(i=0; i<gender.length; i++)
+       {
+           //console.log(gender[i].checked);
+
+         console.log("log");
+           if(gender[i].checked)
+           {
+              
+               isChecked = true;
+               break;
+           }
+
+       }
+
+       if(!isChecked)
+       {
+           alert("Please select gender");
+
+            gender[0].focus();
+           return false;
+
+       }
+
+       if(form.country.value=="")
+       {
+           alert("Please select your country");
+
+           form.country.focus();
+           return false;
+       }
+
+       if(!form.terms.checked)
+       {
+           alert("Please accept terms & conditions");
+
+            form.terms.focus();
+           return false;
+       }
+
+        form.submit();
+    }
+    </script>
+   
+</head>
+
+<body> 
+
+    <form name="reg" method="POST">
+        Username:
+        <input type="text" name="uname" value="ssgdf" required>
+        <br>
+        <br> Password:
+        <input type="password" name="upass" minlength="5" maxlength="10">
+        <br>
+        <br> Confirm password:
+        <input type="password" name="ucpass">
+        <br>
+        <br> Email:
+        <input type="email" name="uemail" required>
+        <br>
+        <br> Address:
+        <textarea name="address"></textarea>
+        <br>
+        <br> Phone:
+        <input type="text" name="uphone" maxlength="10">
+        <br>
+        <br> Mobile:
+        <input type="text" name="umobile">
+        <br>
+        <br> Do not call :
+        <input type="checkbox" name="dnc">
+        <br>
+        <br> Gender :
+        <input type="radio" name="gen"> Male
+        <input type="radio" name="gen"> Female
+        <br>
+        <br> Country:
+        <select name="country">
+            <option value="">Please select your country</option>
+            <option value="ind" selected>India</option>
+            <option value="pak">Pakistan</option>
+        </select>
+        <br>
+        <br>
+
+        <input type="checkbox" name="terms" value="teee" checked> Accept terms & conditions
+        <br>
+        <br>
+
+        <input type="button" value="Register" onclick="doValidation()">
+
+    </form>
+
+</body>
+
+</html>

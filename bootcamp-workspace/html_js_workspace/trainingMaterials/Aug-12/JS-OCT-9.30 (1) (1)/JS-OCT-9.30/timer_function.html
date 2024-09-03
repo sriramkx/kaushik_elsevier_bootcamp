@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+
+        function getTime() {
+            var dt = new Date();
+
+            var time = dt.toLocaleTimeString();
+            document.getElementById("res").innerHTML = time;
+        }
+
+        var xyz;
+
+        function startTimer() {
+
+            getTime();
+
+
+           xyz = setInterval(getTime, 1000)
+
+        }
+
+        function stopTimer()
+        {
+            clearInterval(xyz);
+
+            document.getElementById("res").innerHTML = "Timer stopped";
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <input type="button" value="Start Timer" onclick="startTimer()"> &nbsp;
+    <input type="button" value="Stop Timer" onclick="stopTimer()">
+
+    <div id="res">
+
+    </div>
+
+</body>
+
+</html>

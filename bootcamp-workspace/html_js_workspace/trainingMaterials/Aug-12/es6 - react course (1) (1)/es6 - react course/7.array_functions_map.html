@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array function - map</title>
+    <script>
+        console.clear();
+
+        // const mArr = [1,2,3,4,5]
+
+        // for (let i=0;i<mArr.length;i++){
+        //     console.log(i)
+
+        // }
+
+
+        const mArr = [1,2,3,4,5]
+        let newArr= []
+        for (let i=0;i<mArr.length;i++){
+            newArr.push(mArr[i]*2);
+         
+         }
+         console.log(newArr)
+// normal method
+
+
+// using array function 
+
+const mArr1 =[1,2,3,4,5];
+
+let newArr1=[]
+
+const doubleValues = (item) =>{
+
+    return item*2
+}
+
+for (let i=0;i<mArr1.length;i++){
+            newArr1.push(doubleValues(mArr1[i]));
+         
+         }
+
+         console.log(newArr1)
+
+
+//map function
+
+const mArr2=[1,2,3,4,5];
+
+
+let newArr2 = mArr2.map((data,pos) => {
+
+console.log(`Item at pos : ${pos} is ${data}`);
+return data *2;
+
+})
+
+console.log(mArr2);
+console.log(newArr2);
+
+// object using map function 
+
+const mArr3 = [
+    {name:'john',experience:'it',years:2},
+    {name:'luke',experience:'dev',years:21},
+    {name:'manuel',experience:'android',years:7},
+    {name:'sam',experience:'mobile',years:9}
+
+
+]
+
+let newArr3 = mArr3.map((data,pos) => {
+
+console.log(data)
+return {
+    name: data.name,
+    exp:data.experience
+
+};
+});
+
+console.log(newArr3)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

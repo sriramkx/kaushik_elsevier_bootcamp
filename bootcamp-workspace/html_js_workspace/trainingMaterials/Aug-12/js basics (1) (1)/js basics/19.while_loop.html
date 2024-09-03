@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while loop</title>
+    <script>
+
+console.clear()
+
+// while(condition) {
+// 	// block of code
+// }
+
+// var mValue = 0
+// while(mValue < 50) {
+// 	mValue++
+// }
+
+// console.log(mValue);
+
+
+
+
+// Q1. Write a JavaScript program to find the GCD of two numbers : 15 and 25.
+// [ The GCD or Greatest Common Divisor of two integers is the largest integer that divides each of the integers such that their remainder is zero.]
+// Sample Data
+// Input:
+num1 = 15;
+num2 = 25;
+var lowerNum = num1<=num2 ? num1 : num2;
+var higherNum = num1>num2 ? num1 : num2;
+var actualLowerNum = lowerNum
+while(lowerNum > 0){
+    if(higherNum%lowerNum == 0 && actualLowerNum%lowerNum == 0){
+        gcd = lowerNum;
+        break;
+    }
+    lowerNum--;    
+}
+console.log(gcd)
+// Output:
+// 5
+
+
+// Q2. Write a JavaScript program to print the LCM of two numbers: 15 and 20?
+// [A common multiple is a number that is a multiple of two or more integers. e.g. The
+// common multiples of 3 and 4 are 0, 12, 24, .... The least common multiple (LCM) of two
+// numbers is the smallest number (not zero) that is a multiple of both.]
+// Sample Data
+// Input:
+n1 = 5;
+n2 = 18;
+var i =2
+var lcm;
+while(i<100){
+    console.log("i: "+i)
+    if(i%n1 == 0 && i%n2 == 0){
+        lcm = i;
+        break;
+    }
+}
+console.log(i)
+
+// Output:
+// 90
+
+
+
+// Q3. Write a JavaScript program to find the number of even values in sequence before
+// the first occurrence of a given number. [Hint: You can use while loop here]
+// Sample Data
+// Input:
+// Array: [1,2,3,4,5,6,7,8,9,10,11,12]
+// Number: 8
+var arr = [1,2,3,4,5,6,7,8,9,10,11,12];
+var occ = 8;
+var count = 0;
+var searchTillPos = arr.indexOf(occ)<=arr.length ? arr.indexOf(occ) : arr.length-1;
+while(searchTillPos >= 0){
+     if(arr[searchTillPos-1]%2 == 0){
+        count++;
+    }
+    searchTillPos--;
+}
+console.log(count)
+// Output:
+// 3
+
+
+// Q4. Write a JavaScript program to sum the multiples of 3 and 5 under 1000.
+// Sample Data
+// Input:
+// Numbers from 0 to 1000
+var maxNum = 1000;
+var summedValue = 0;
+while(maxNum >= 0){
+    if(maxNum%3 == 0 || maxNum%5 == 0){
+        summedValue += maxNum;
+    }
+    maxNum--;
+}
+console.log(summedValue)
+
+// Output:
+// 233168
+
+
+// Q5. Write a JavaScript program which iterates the integers from 1 to 15. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+// Sample Data
+// Input:
+// Numbers from 0 to 15
+var minVal = 1;
+var maxVal = 15;
+var printVal = "";
+while(minVal <= maxVal){
+    if(minVal%3 == 0 && minVal%5 == 0){
+        printVal = minVal+ ' FizzBuzz';
+    }
+    else if(minVal%3 == 0){
+        printVal = minVal+ ' Fizz';
+    }
+    else if(minVal%5 == 0){
+        printVal = minVal+ ' Buzz';
+    }
+    else{
+        printVal = minVal
+    }
+    console.log(printVal);
+    minVal++;
+}
+// Output:
+// 1
+// 2
+// 3 Fizz
+// 4
+// 5 Buzz
+// ...
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

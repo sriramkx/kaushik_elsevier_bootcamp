@@ -1,0 +1,410 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - Live Session 7th Sept</title>
+  
+  
+  
+  
+<style>
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+#landing-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#cover-pic {
+    width: 100%;
+}
+
+#landing-image-wrapper {
+    position: relative;
+}
+
+#overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#loader-wrapper {
+    width: 600px;
+    height: 24px;
+    background-color: bisque;
+    border-radius: 12px;
+    margin: 48px auto;
+}
+
+#loader {
+    width: 75%;
+    height: 24px;
+    background-color: lightcoral;
+    border-radius: 12px;
+}
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(0,64,128, 0.2);
+  border-right: 1.1em solid rgba(0,64,128, 0.2);
+  border-bottom: 1.1em solid rgba(0,64,128, 0.2);
+  border-left: 1.1em solid #004080;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+input {
+    font-family: 'Raleway', sans-serif;
+}
+
+nav {
+    display: none;
+}
+
+header > section{
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    background-color: lightblue;
+    text-align: center;
+}
+
+#todo-input {
+    font-size: 24px;
+    padding: 12px 24px;
+    margin-right: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-top: 32px;
+}
+
+button {
+    font-size: 24px;
+    margin-top: 24px;
+    margin-right: 36px;
+    padding: 12px 24px;
+}
+
+#todo-list {
+    width: 100%;
+    max-width: 600px;
+    font-size: 24px;
+    margin: 0 auto;
+    padding-top: 32px;
+    text-align: left;
+    list-style: none;
+}
+
+#todo-list > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px 32px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px #ccc;
+}
+#todo-list > li > i{
+    cursor: pointer;
+}
+
+.horizontal-align {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.horizontal-align i {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        display: block;
+        font-size: 36px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    nav i {
+        cursor: pointer;
+    }
+
+    #sidebar {
+        transition: all 1s;
+        width: 100%;
+        height: 100%;
+        max-width: 270px;
+        background-color: white;
+        position: fixed;
+        left: -270px;
+        top: 72px;
+    }
+
+    #sidebar ul {
+        list-style-type: none;
+        width: 100%;
+        height: 100%;
+        padding-top: 32px;
+    }
+
+    #sidebar ul li {
+        padding-left: 0;
+        font-size: 24px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .hide {
+        display: none;
+        transform: translateX(-270px);
+    }
+
+    .show {
+        display: block;
+        transform: translateX(270px);
+    }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JS - Getting Styles</title>
+    <link rel="stylesheet" href="/index.css" type="text/css" >
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/35c398e458.js"></script>
+</head>
+<body>
+    <header>
+        <!-- <section id="landing-section">
+            <!-- <div id="loader-wrapper">
+                <div id="loader">20%</div>
+            </div>
+            <div class="loader">Loading...</div> -->
+            <!-- <div id="landing-image-wrapper">
+                <div id="overlay"></div>
+                <img src="assets/landing-background-no-overlay.jpg" alt="Background Image" />
+            </div> -->
+        </section>
+
+        <section>            
+            <input type="text" id="todo-input" placeholder="Enter tasks here..." />
+            <br>
+            <button id="add-item">Add List Item</button>
+            <ul id="todo-list">
+            </ul>
+        </section>
+    </header>
+    <script src="/index.js"></script>
+</body>
+</html>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+  
+      <script id="rendered-js" >
+var list = document.getElementById('todo-list');
+var inputBox = document.getElementById('todo-input');
+var btnAdd = document.getElementById('add-item');
+
+var currentInputValue = '';
+inputBox.addEventListener('input', function (e) {
+  currentInputValue = e.target.value;
+});
+
+inputBox.addEventListener('keyup', function (e) {
+  if (e.keyCode === 13) {
+    addListItem();
+  }
+});
+
+function createNewNode() {
+  var newListElement = document.createElement('li');
+  var textNode = document.createTextNode(currentInputValue);
+  newListElement.appendChild(textNode);
+  newListElement.id = "item" + (list.childElementCount + 1);
+
+  return newListElement;
+}
+
+function addListItem() {
+  if (currentInputValue !== undefined && currentInputValue !== null && currentInputValue !== '') {
+    var newListElement = createNewNode();
+
+    list.appendChild(newListElement);
+
+    inputBox.value = '';
+    currentInputValue = '';
+  } else {
+    alert('Please enter a valid TODO item');
+  }
+}
+
+btnAdd.addEventListener('click', createTODOItemAtBackend);
+
+function createTODODynamically(id, title) {
+  var newListElement = document.createElement('li');
+  var listDiv = document.createElement('div');
+  listDiv.classList.add('horizontal-align');
+
+  var textNode = document.createTextNode(title);
+  var deleteIcon = document.createElement('i');
+  deleteIcon.classList.add('fas');
+  deleteIcon.classList.add('fa-trash');
+  listDiv.appendChild(textNode);
+  listDiv.appendChild(deleteIcon);
+
+  deleteIcon.onclick = function () {
+    console.log(document.getElementById(id));
+    document.getElementById(id).remove();
+    //selectedElement.remove()
+  };
+
+  newListElement.appendChild(listDiv);
+  newListElement.id = id;
+
+  return newListElement;
+}
+
+function getTODOListFromBackend() {
+  var http = new XMLHttpRequest();
+  http.onreadystatechange = function () {
+    if (this.readyState === 4) {
+      if (this.status === 200) {
+        var response = JSON.parse(this.responseText);
+        for (var i = 0; i < 10; i++) {
+          list.appendChild(createTODODynamically(response[i].id, response[i].title));
+        }
+      } else {
+        console.log('Call Failed');
+      }
+    }
+  };
+  http.open('GET', 'https://jsonplaceholder.typicode.com/todos', true);
+  http.send();
+}
+
+getTODOListFromBackend();
+
+function createTODOItemAtBackend() {
+  var http = new XMLHttpRequest();
+  http.open('POST', 'https://jsonplaceholder.typicode.com/todos', true);
+  http.onreadystatechange = function () {
+    if (this.readyState === 4) {
+      if (this.status === 201) {
+        var response = JSON.parse(this.responseText);
+        list.appendChild(createTODODynamically(response.id, currentInputValue));
+      } else {
+        console.log('Call Failed');
+      }
+    }
+  };
+  var obj = JSON.stringify({
+    "userId": 1,
+    "title": currentInputValue,
+    "completed": false });
+
+  http.send(obj);
+}
+
+// var loader = document.getElementById('loader');
+// var currentProgress = 0;
+
+// var interval = setInterval(function() {
+//     console.log("Interval Func Triggered")
+//     currentProgress = (currentProgress += 10) <= 100 ? currentProgress : 0;
+//     loader.innerHTML = currentProgress + '%';
+//     loader.style.width = currentProgress + '%'
+// }, 1000)
+//# sourceURL=pen.js
+    </script>
+
+  
+
+</body>
+
+</html>
+ 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template strings</title>
+    <script>
+console.log();
+
+const name = 'john'
+
+//console.log(name);
+
+const Greetings = 'Hello' + ' ' + name ;
+
+console.log(Greetings);
+
+// using template strings
+
+const Greetings2 = `Hello world ${name}`;
+console.log(Greetings2);
+
+
+
+// normal function in javascript 
+
+const firstname = 'john'
+const lastname = 'wick'
+
+function getFullname(firstname,lastname){
+    return firstname + ' ' + lastname;
+ 
+}
+
+console.log(getFullname(firstname,lastname))
+
+// function using template strings
+
+const firstname123 = 'john'
+const lastname123 = 'wick'
+
+
+function getFullname123(firstname123,lastname123){
+    return `${firstname123} ${lastname123}`;
+ 
+}
+
+const myGreetings = `hello ${getFullname123(firstname123,lastname123)  + 100 } `;
+
+
+console.log(myGreetings);
+
+// rgba(red,green,blue,alpha)
+
+let red= 200;
+let green = 155;
+let blue = 100;
+let alpha = 0.8;
+
+const rgba = 'rgba(' + red + ',' + green + ',' + blue +',' + alpha + ')'
+console.log(rgba)
+
+// using template strings
+
+const rgba1 = `rgba (${red},${green},${blue},${alpha})`;
+console.log(rgba1)
+
+
+// color change in template strings
+
+let rgbStr = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
+
+console.log(rgbStr);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

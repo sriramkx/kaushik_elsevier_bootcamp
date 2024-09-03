@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread_operator</title>
+    <script>
+
+console.clear();
+
+let mArr1=[1,2,3,4,5];
+
+console.log([...mArr1]);  // o/p - [1,2,3,4,5]
+
+//another type
+
+let mArr12= [1,2,3,4,5];
+
+let mArr2 = [...mArr12];
+
+console.log(mArr2);
+
+
+//spread operator usage
+
+
+let mArr3 = [1,2,3,4,5];
+
+let mArr4 =[mArr3];
+
+mArr3.push(6)
+
+console.log(mArr3);
+console.log(mArr4);
+
+
+//spread operator usage
+
+
+let mArr3a = [1,2,3,4,5];
+
+let mArr4a =[...mArr3a];
+
+mArr3a.push(6)
+
+console.log(mArr3a);
+console.log(mArr4a);
+
+// normal concat()
+
+let mArr5 = [1,2,3,4,5]
+
+let mArr6 = [6,7,8]
+
+let mArr7= mArr5.concat(mArr6)
+
+console.log(mArr7)
+
+
+// spread operator adding
+
+let mArr5a = [1,2,3,4,5]
+
+let mArr6a = [6,7,8]
+
+let mArr7a=[...mArr5a, ...mArr6a]
+let mArr8a=[...mArr6a, ...mArr5a]
+
+console.log(mArr7a)
+console.log(mArr8a)
+
+// adding at start
+let mArr9a=[0,...mArr6a, ...mArr5a]
+
+console.log(mArr9a)
+
+// adding at end
+let mArrl=[...mArr6a, ...mArr5a,9]
+
+console.log(mArrl)
+
+
+// in object
+
+let mObj1 ={name:'shinchan'}
+
+let mObj2 = {dept: 'IT'}
+
+let mObj3 = {...mObj1,...mObj2}
+
+console.log(mObj3)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

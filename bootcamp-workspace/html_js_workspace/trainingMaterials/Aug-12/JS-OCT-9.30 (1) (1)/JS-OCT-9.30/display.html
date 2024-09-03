@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+    
+    //alert("welcome");
+
+    console.log("Good Morning");
+
+    function doWrite()
+    {
+       // document.write("Hello All");
+
+   //  var x =  document.getElementById("p1").innerHTML; //GETTER
+
+    // alert(x);
+
+     document.getElementById("p1").innerHTML += " Welcome"; // SETTER
+
+     // document.getElementById("p1").innerHTML = document.getElementById("p1").innerHTML+ " Welcome";
+
+     // x += y;  ==>> x = x+y; 
+
+     document.getElementById("p1").style.backgroundColor = "yellow";
+     
+    }
+
+
+   
+    
+    </script>
+</head>
+<body>
+
+    <h1>Display methods</h1>
+
+    <p id="p1">Hello All</p>
+
+    <input type="button" value="Write" onclick="doWrite()">
+    
+</body>
+</html>

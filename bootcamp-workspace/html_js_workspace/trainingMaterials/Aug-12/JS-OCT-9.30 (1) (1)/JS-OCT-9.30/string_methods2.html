@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+    
+    var str = "hi gopi, h r u Gopi?";
+
+    var str2 = str.replace(/gopi/gi, "Bala");
+
+    //alert(str2);
+    //alert(str);
+
+   // alert(str.startsWith("Go", 3));
+
+ //  alert(str.endsWith("Gopi?"));
+
+ //alert(str.includes("go", 7));
+
+ var ma = str.match(/go/gi);
+
+ //alert(Array.isArray(ma));
+
+ //alert(ma);
+
+ var email = "gopi@gmail.com";
+
+ var isMatched = !email.match(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/);
+
+// alert(isMatched);
+
+ if(isMatched)
+ {
+   //  alert("Invalid");
+ }
+ else {
+    // alert("valid");
+ }
+
+ //alert(str.repeat(10));
+
+ var arr = ["hi", 88, 74];
+
+ var str3 = arr.toString();
+
+ //alert(str3);
+ //alert(typeof str3);
+
+ var str4 = "hi all, wellcome to js session";
+
+ var arr2 = str4.split();
+
+ //alert(arr2[0]);
+
+ var data = "      go      pi      ";
+ alert(data.trim());
+
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array function - find() and findIndex() </title>
+    <script>
+
+const numArr = [-1,-2,-3,-4,1,2,3,4]
+
+const result = numArr.find(item => {
+
+    console.log(item);
+})
+
+console.log('result =>',result)
+
+
+//condition applied
+
+const numArr1 = [-1,-2,-3,-4,1,2,3,4]
+
+const result1 = numArr1.find(item => {
+
+return (item %2 === 0 && item >=0)
+
+})
+
+console.log('result =>',result1)
+
+
+// findindex
+
+const numArr2 = [-1,-2,-3,-4,1,2,3,4]
+
+const result2 = numArr2.findIndex(item => {
+
+return (item %2 === 0 && item >=0)
+
+})
+
+console.log('result =>',result2)
+
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

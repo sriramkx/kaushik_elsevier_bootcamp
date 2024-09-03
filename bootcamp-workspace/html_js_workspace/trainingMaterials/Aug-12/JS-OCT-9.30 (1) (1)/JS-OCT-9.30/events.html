@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return doPrevent()">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        function doGreet(name)
+        {
+            alert("Welcome "+name)
+        }
+
+        function myFormSubmit()
+        {
+            alert("form submitted");
+
+            return false;
+        }
+
+        function doPrevent()
+        {
+            alert("You can't perform this operation");
+
+            return false;
+        }
+    </script>
+</head>
+<body onload="alert('welcome to my page')">
+
+    <form name="login" onsubmit="return myFormSubmit()" method="POST" action="clac.html" enctype="multipart/form-data">
+
+    Onclick : <input type="button" value="Click Me" onclick="doGreet('gopi')"> <br><br>
+
+    OnBlur : <input type="text" name="uname" id="ip1" placeholder="Please enter your name" onblur="doGreet('gopi')"> <br><br>
+
+    OnChange : <input type="text" name="upass" id="ip1" value="10"> <br><br>
+
+    OnFocus : <input type="text" name="upass" id="ip1" value="10" onfocus="doGreet(this.value)"> <br><br>
+
+    OnSelect : <input type="text" name="upass" id="ip1" onselect="doGreet(this.value)"> <br><br>
+
+    OnKeyPress : <input type="text" name="upass" id="ip1" onkeypress="doGreet(this.value)"> <br><br>
+
+    OnKeyDown : <input type="text" name="upass" id="ip1" onkeydown="doGreet(this.value)"> <br><br>
+
+    OnKeyUp : <input type="text" name="upass" id="ip1" onkeyup="doGreet(this.value)"> <br><br>
+
+
+    <input type="submit" value="SEND DATA">
+
+</form>
+
+
+    
+</body>
+</html>

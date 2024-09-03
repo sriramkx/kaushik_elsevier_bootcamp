@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string inbuilt function - part2</title>
+
+
+    <script>
+
+
+console.clear()
+
+var exampleString = "This is Javascript tutorial"
+
+// toUpperCase() - It converts our string -> uppercase characters
+console.log(exampleString.toUpperCase())
+
+// toLowerCase() - It converts our string -> lowercase characters
+console.log(exampleString.toLowerCase())
+
+// concat() - It merges two or more strings
+var firstName = "Javascript"
+var lastName = "Playground"
+console.log(exampleString.concat(firstName))
+console.log(exampleString.concat(' ', firstName, ' ', lastName))
+
+// We can also use '+' to concat two or more strings
+console.log(firstName + ' ' + lastName + ' ' + exampleString)
+
+// trim() - It removes extra spaces
+var extraSpaceString = '        mystring     '
+console.log(extraSpaceString.trim())
+
+var extraSpaceStringExample2 = '      my string    '
+console.log(extraSpaceStringExample2.trim())
+
+// charAt() -> this take a position as an arg and returns the character at that position
+var charAtExampleString = 'This is my test string'
+console.log(charAtExampleString.charAt(5))
+console.log(charAtExampleString.charAt(11))
+
+
+// split() splits our string on the basis of the arguments passed
+
+var sampleString = "This is my sample string"
+console.log(sampleString.split(' ')) 
+
+var sampleString2 = "This,is,my,sample,string"
+console.log(sampleString2.split(','))
+
+var sampleString3 = "This is awesome"
+console.log(sampleString3.split())
+
+
+
+// Q. Answer the following questions. Also, explain why do you think that your answer is correct.
+var str1 = 'Today is';
+var str2 = ' A beautiful day '
+var str3 = ' In Hawaii. '
+// Result = 'Today is a beautiful day in Hawaii.'
+// 1. Use the str1, str2, str3 to create the Result string. Keep the extra spaces, lowercase and uppercase letters in mind.
+console.log(str1+str2.toLowerCase()+str3.toLowerCase().trim())  // changed the str2 and str3 to lower case and trimmed the str3 alone. but case condition not satisfied in str3 alone.
+
+ var mStr = 'Mo Tu We Th Fr Sa Su'
+// 2. Convert this string to an array that holds different days. Also, capitalize all the characters.
+console.log(mStr.toUpperCase().split(' '))  //made the string to upper case and split using space
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

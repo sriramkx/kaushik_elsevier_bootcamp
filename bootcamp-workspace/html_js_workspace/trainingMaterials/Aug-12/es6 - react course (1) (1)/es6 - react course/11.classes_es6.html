@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes in ES6</title>
+
+    <script>
+
+function Person(name,birthYear){
+    this.name = name;
+    this.yearOfBirth = birthYear;
+    this.getDetails = function(){
+        return "Name :" + this.name + " and age :" + (2019 - this.yearOfBirth);
+
+
+    }
+
+
+}
+
+var john = new Person('john',1999)
+
+console.log(john.getDetails())
+
+// normal function 
+
+// classes function
+class Person1 {
+    constructor(name1, birthYear1){
+        this.name1 = name1;
+         this.yearOfBirth1 = birthYear1
+
+    }
+  getDetails1= ()=>{
+      return  `Name is  ${this.name1} and age is ${2019 - this.yearOfBirth1}`
+
+
+  }
+}
+
+var johnwick = new Person1('johnwick',1990)
+
+console.log(johnwick.getDetails1())
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

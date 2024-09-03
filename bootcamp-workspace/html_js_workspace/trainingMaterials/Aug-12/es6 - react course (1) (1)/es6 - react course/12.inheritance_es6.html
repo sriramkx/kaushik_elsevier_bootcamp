@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes in ES6</title>
+
+    <script>
+
+
+// classes function
+class Person1 {
+    constructor(name1, birthYear1){
+        this.name1 = name1;
+         this.yearOfBirth1 = birthYear1
+
+    }
+  getDetails1= ()=>{
+      return  `Name is  ${this.name1} and age is ${2019 - this.yearOfBirth1}`
+
+
+  }
+}
+
+class Pilot extends Person1{
+    constructor(name1, birthYear1,exp,type,license){
+        super(name1, birthYear1)
+        this.experience = exp;
+        this.type= type;
+        this.license = license;
+
+
+    }
+
+    getData =()=>{
+        console.log(`Experience ${this.experience} and type is ${this.type}`)
+    }
+
+}
+
+const shichan = new Pilot('john',1980,24,'private','Typ89')
+
+console.log(shichan.getData())
+console.log(shichan)
+
+
+
+const mishae = new Pilot('michael',2001,24,'public','IND9')
+
+console.log(mishae.getData())
+console.log(mishae)
+
+// extends and super keyword used for inheritance
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

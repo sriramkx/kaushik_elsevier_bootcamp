@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment operator</title>
+    <style>
+        .list-item {
+	font-size: 26px;
+	margin-top: 12px;
+}
+    </style>
+    <script>
+        console.clear()
+
+var num1 = 15;
+var num2 = 30;
+
+// =
+// num1 = 20;
+
+// +=
+// num1 += 10; // num1 = num1 + 10
+// num1 += num2 // num1 = num1 + num2
+// console.log(num1)
+
+// -=
+// num1 -= 10; //num1 = num1 - 10
+// num1 -= num2 //num1 = num1 - num2
+// console.log(num1)
+
+// *=
+// num1 *= 20 
+// num1 = num1 * 20
+// console.log(num1)
+
+// /=
+num1 /= 10 //num1 = num1 / 10
+console.log(num1)
+
+// %=
+num1 %= 10 //num1 = num1 % 10
+console.log(num1)
+
+// Answer the following questions WITHOUT executing the code in Codepen.
+// Also, explain why do you think your answer is correct.
+// Q1. With x = 0, which of the following statements will produce a value of 1?
+x++;
+x = x + 1;
+x += 1;
+// Ans: b and c. with x++, the value of x will be 0. others it will be 1.
+
+// Q2. With x = 1, which of the following statements will produce a value of 0?
+x--;
+x = x - 1;
+x -= 1;
+// Ans: b and c. because with x--, the value of x will be 1 until it is used for the next time.
+
+// Q3. What will be the result of following statement?
+var num = 100;
+num += 5 * 10 / 2;
+// Ans: num = num+(5*10/2) = 100+(25) = 125
+
+// Q4. What will be the result of following statement?
+var num = 100;
+num *= 2 * 10 / 5;
+// Ans: 400 -   num = num*2*10/5 = 100*2*10/5 = 400
+
+// Q5. What will be the result of following statement?
+var num = 100;
+num /= 2 * 8 - 15;
+// Ans: num = num/(2*8-15) = 100/(16-15) = 100/1 = 100
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>Assignment Operators</h1>
+<ul>
+	<li class='list-item'>=</li>
+	<li class='list-item'>+=</li>
+	<li class='list-item'>-=</li>
+	<li class='list-item'>*=</li>
+	<li class='list-item'>/=</li>
+	<li class='list-item'>%=</li>
+</ul>
+    
+</body>
+</html>

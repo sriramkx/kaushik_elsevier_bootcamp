@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+    <script>
+        console.clear()
+
+// var mCars = {
+// 	"p1" : "350 kmph",
+// 	"gallardo" : '320 kmph',
+// 	"veyron" : '409 kmph',
+// 	"agera" : '429 kmph'
+// }
+
+// console.log(mCars)
+// console.log(typeof(mCars))
+
+
+// var mAgera = {
+// 	name: "Agera",
+// 	manufacturer: {
+// 		name: "Koenigsegg",
+// 		loaction: "Sweden"
+// 	},
+// 	topSpeed: 429,
+// 	color: "Black",
+// 	spoilers: false,
+// 	applyBrakes: function() {
+// 		setTimeout(function() {
+// 			console.log('Car Stopped now asd');
+// 		}, 10000)
+// 	}
+// }
+
+// console.log(mAgera.name)
+// console.log(mAgera.topSpeed)
+// console.log(mAgera.manufacturer)
+// console.log(mAgera.manufacturer.name)
+// console.log(mAgera.applyBrakes())
+// console.log(mAgera.applyBrakes)
+
+
+
+
+// Q1. We have an object of customers for our food delivery app with the information about their past orders with order values.
+// Write a JavaScript program to give a "Premium Membership" to the customer if the
+// customer has made at least 5 orders of the minimum value of 20.
+// The customers and their past order history is given below:
+var customers_data={
+'Ben10': [22, 30, 11, 17, 15, 52, 27, 12],
+'Sameer': [5, 17, 30, 33, 40, 22, 26, 10, 11, 45],
+'Zeeshan': [22, 30, 11, 5, 17, 30, 6, 57]
+}
+privilegeOrderValue = 20;
+var privilegeOrderCount =5;
+var orderCountBen10 = 0;  
+  
+for (let i = 0; i < customers_data.Ben10.length; i++) {
+    const element = customers_data.Ben10[i];
+    if(element >privilegeOrderValue){
+        orderCountBen10++;
+    }  
+}
+var orderCountSameer = 0;    
+for (let i = 0; i < customers_data.Sameer.length; i++) {
+    const element = customers_data.Sameer[i];
+    if(element >privilegeOrderValue){
+        orderCountSameer++;
+    }  
+}
+var orderCountZeeshan = 0;    
+for (let i = 0; i < customers_data.Zeeshan.length; i++) {
+    const element = customers_data.Zeeshan[i];
+    if(element >privilegeOrderValue){
+        orderCountZeeshan++;
+    }  
+}
+if(orderCountBen10 > privilegeOrderCount){
+    console.log("Ben10 is a PRIVILEGED customer")
+}
+else{
+    console.log("Ben10 is a normal customer")
+}
+if(orderCountSameer > privilegeOrderCount){
+    console.log("Sameer is a PRIVILEGED customer")
+}
+else{
+    console.log("Sameer is a normal customer")
+}
+if(orderCountZeeshan > privilegeOrderCount){
+    console.log("Zeeshan is a PRIVILEGED customer")
+}
+else{
+    console.log("Zeeshan is a normal customer")
+}
+
+
+// Q2. Write a JavaScript program to list the properties of a JavaScript object.
+// Sample Data
+// Input:
+// Object:
+student = {
+name: "David Rayy",
+sclass: "VI",
+rollno: 12
+};
+console.log(Object.getOwnPropertyNames(student))
+// Output:
+// ["name", "sclass", "rollno"]
+
+// Q3. Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property
+// Sample Data
+// Input:
+student = {
+name : "David Rayy",
+sclass : "VI",
+rollno : 12
+}
+console.log(student)
+delete student.rollno;
+console.log(student)
+Output:
+student = {
+name : "David Rayy",
+sclass : "VI"
+}
+
+// Q4. Write a JavaScript program to get the length of a JavaScript object.
+// Sample Data
+// Input:
+student = {
+name : "David Rayy",
+sclass : "VI",
+rollno : 12
+};
+console.log(Object.getOwnPropertyNames(student).length)
+
+// Output:
+// 3
+
+// Q5. Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books.
+// Sample Data
+// Input:
+library = [
+{
+author: 'Bill Gates',
+title: 'The Road Ahead',
+readingStatus: true
+},
+{
+author: 'Steve Jobs',
+title: 'Walter Isaacson',
+readingStatus: true
+},
+{
+author: 'Suzanne Collins',
+title: 'Mockingjay: The Final Book of The Hunger Games',
+readingStatus: false
+}];
+
+for (let index = 0; index < library.length; index++) {
+	const book = library[index];
+	if(book.readingStatus == true){
+		console.log('You have already read '+ book.title+' by '+book.author+'.')
+	}
+	else {
+		console.log('You still have to read '+ book.title+' by '+book.author+'.')
+	}
+	
+}
+// Output:
+// For book with reading status 'true' we can print :
+// 'You have already read {book-name} by {author-name}.'
+// For book with reading status 'false' we can print:
+// 'You still need to read {book-name} by {author-name}.'
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

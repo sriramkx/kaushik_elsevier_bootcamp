@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        function getMenus() {
+            var menus = ["Home", "About", "Contact", "Services"];
+
+            var res = "<ul>";
+
+            for (i = 0; i < menus.length; i++) {
+                res += "<li>" + menus[i] + "</li>"; // res = res + "fsdfsd";
+
+                // alert(res);
+            }
+
+            res += "</ul>";
+
+            alert(res);
+
+            document.getElementById("result").innerHTML = res;
+        }
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <input type="button" value="Get Menus" onclick="getMenus()">
+    <div id="result">
+
+    </div>
+
+
+
+</body>
+
+</html>

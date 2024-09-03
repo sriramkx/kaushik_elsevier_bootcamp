@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+    <script>
+
+        // normal method 
+        console.clear();
+
+        let name = 'john manuel luke'
+        let nameArr = name.split('')
+        let nameArrWord = name.split(' ')
+        console.log(nameArr);
+        console.log(nameArrWord);
+
+let firstName = nameArrWord[0];
+
+let lastName = nameArrWord[1];
+
+
+console.log(firstName);
+console.log(lastName);
+
+
+
+// destructuring method
+
+let [firstName1,middleName1] = nameArrWord
+console.log(firstName1);
+console.log(middleName1);
+
+
+let [firstName2,middleName2,lastName2] = nameArrWord
+console.log(firstName2);
+console.log(middleName2);
+console.log(lastName2);
+
+let [firstName3,,lastName3] = nameArrWord
+console.log(firstName3);
+//console.log(middleName3); it will raise an error
+
+
+// object destructuring
+
+
+const person ={
+    firstNameObj : 'john123S',
+    lastNameObj : 'manuel1',
+    middleNameObj : 'luke',
+    age :29
+}
+
+let {firstNameObj,lastNameObj} = person ;
+
+console.log(firstNameObj);
+
+
+let {a,b} = person;
+
+console.log(a) 
+
+// another name in object
+
+let firstName45 = 'michael';
+let lastName45 ='madhan';
+let age = 39;
+
+const personObj45 ={
+    fname : firstName45,
+    lname :lastName45,
+    page : age
+
+}
+
+console.log(personObj45)
+
+const personObj456 ={
+     firstName45,
+    lastName45,
+     age
+
+}
+
+console.log(personObj456)
+
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

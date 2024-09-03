@@ -1,0 +1,50 @@
+
+body{padding: 0 auto;margin:0 auto;}
+.header {
+    background-color: black;
+    color: white;
+    float: left;
+    width: 100%;text-align: center;text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;font-weight: 400;
+  }
+
+  .menu li {display: inline;
+margin:0em 2em 0em 2em;}
+
+.herosection {
+    float: left;
+    width: 100%;
+    background: 
+   linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0, 0.4) 100%),
+   url('../images/intro-bg.jpg');
+    /* background-image: url('../images/intro-bg.jpg'); */
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 3em 0em 3em 0em;
+  }
+
+  .herosection h2{font-family: "Rochester", cursive;font-weight: 400;font-size:140px;}
+
+
+  .herosection p{font-family: "Open Sans", sans-serif;
+    font-size: 24px;font-weight: 400;}
+
+    .section1 {
+        float: left;
+        width: 100%;
+      }
+
+      .section1_left {
+        float: left;
+        width: 50%;
+        background: red;
+      }
+
+      .section1_right{
+        float: right;
+        width: 50%;
+        background: yellow;
+      }

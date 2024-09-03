@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array - part2</title>
+    <script>
+        
+        console.clear()
+
+// var mFriends = ['Shaw', 'Clara', 'Vab', 'Kun', 'Jacob', 'Dina']
+// mFriends.splice(3, 0, 'Donna', 'Rachel')
+
+// // 1st tells where to start
+// // 2nd tells how many items to be deleted
+// // 3rd and 4th and so on tells what items to  be added
+// console.log(mFriends)
+
+// mFriends.splice(0, 0, 'Harvey')
+// console.log(mFriends)
+
+// // Delete item at specific position
+// mFriends.splice(2, 1)
+// console.log(mFriends)
+
+// mFriends.splice(0, 2)
+// console.log(mFriends)
+
+// // Concatenation
+// var mOfficeFriends = ['Nina', 'Aron', 'Katie', 'Vic', 'Paula']
+// var mAllFriends = mFriends.concat(mOfficeFriends)
+
+// console.log('====================================')
+// console.log(mFriends)
+// console.log(mOfficeFriends)
+// console.log(mAllFriends)
+
+// //Sorting Ascending and Descending
+
+// mAllFriends.sort()
+// console.log(mAllFriends)
+
+// mAllFriends.reverse()
+// console.log(mAllFriends)
+
+
+
+// Answer the following questions and run the code in Codepen.
+// Q1. Write a JavaScript program to create a new array by reversing the elements of given array.
+// Sample Data
+// Input:
+arr = [1,'a',2,'b',3,'c',6,'d',7,'e',8,'f']
+console.log(arr.toReversed());
+
+// Output:
+// ["f", 8, "e", 7, "d", 6, "c", 3, "b", 2, "a", 1]
+
+
+
+// Q2. Write a JavaScript program to check if there is at least one element which occurs in
+// two given sorted arrays of integers.
+// Sample Data
+// Input:
+arr1 = [4, 11, 12, 23, 46, 65, 70, 73, 98];
+arr2 = [7, 13, 25, 45, 58, 73, 84];
+var commonElementFound = false;
+for (let i = 0; i < arr1.length; i++) {
+    const element = arr1[i];
+    if(arr2.includes(element)){
+        commonElementFound = true;
+        break;
+    }    
+}
+if(commonElementFound){
+    console.log("Element found: Yes")
+}
+else{
+    console.log("Element found: No")
+}
+// Output:
+// Element found: Yes
+
+
+// Q3. Write a JavaScript program to check whether a given array of integers represents
+// either a strictly increasing or a strictly decreasing sequence.
+// Example:
+// [1,2,2] is NOT a strictly increasing sequence
+// [1,2,3] is a strictly increasing sequence
+var arr = [4,5,6,7,8]
+incSeq = true;
+decSeq = true;
+for (let i = 1; i < arr.length; i++) {
+    if(arr[i] <= arr[i-1]){
+        incSeq = false;
+        break;
+    }    
+}
+for (let j = 0; j < arr.length; j++) {
+    if(arr[j] >= arr[j-1]){
+        decSeq = false;
+        break; 
+    }   
+}
+if(incSeq){
+    console.log(arr + " is a strictly increasing sequence");
+}
+else if(decSeq){
+    console.log(arr + " is a strictly decreasing sequence");
+}
+else{
+    console.log(arr + " is NOT a strictly increasing or decreasing sequence")
+}
+// Sequences to test:
+// 1. [4,5,6,7,8]
+// 2. [3,4,6,6,7,8,9]
+// 3. [34,23,45,55,67,77]
+
+
+// Q4. Write a JavaScript function to convert an amount to coins.
+// Sample Data
+// Input:
+// 46, [25, 10, 5, 2, 1]
+// Here 46 is the amount and 25, 10, 5, 2, 1 are coins.
+var amount = 46
+var coins =[25, 10, 5, 2, 1]
+var quo, rem
+var coinsString = ""
+coins.sort(function(a, b){return b - a});
+for (let i = 0; i < coins.length; i++) {
+    if(amount > 0){
+        quo = 0;
+        rem = 0;
+        const element = coins[i];
+        if(amount<element){
+            continue;
+        }
+        else{
+            quo = amount/element;
+            rem = amount%element;
+            for(let j=0; j<Math.floor(quo);j++){
+                if(i != 0){
+                    coinsString = coinsString + ', '
+                }
+                coinsString = coinsString + element
+            }   
+            amount = rem;
+            continue;         
+        }
+    }       
+}
+coinsString.trim()
+if(coinsString.endsWith(',')){
+    coinsString.substr(0, coinsString.length-1)
+}
+console.log(coinsString)
+
+// Output:
+// 25, 10, 10, 1
+
+
+// Q5. Write a JavaScript function to create a new array from given array by formatting the
+// numbers to human readable form with correct suffix like 1 to 1st, 2 to 2nd, 3 to 3rd and 4 to 4th.
+// Sample Data
+// Input:
+// [22,8, 301, 404, 35, 99]
+var mainArr = [22,8, 300, 404, 35, 99]
+var newArr = []
+console.log('outside loop')
+for (let i = 0; i < mainArr.length; i++) {
+    console.log('insoideloop')
+    const element = mainArr[i];    
+    if(element%10 == 1){
+        newArr.push(element+"st")
+    }
+    else if(element%10 == 2){
+        newArr.push(element+"nd")
+    }
+    else if(element%10 == 3){
+        newArr.push(element+"rd")
+    }
+    else{
+        newArr.push(element+"th")
+    }               
+}
+console.log(newArr)
+
+// Output:
+// ["22nd", "8th", "301st", "404th", "35th", "99th"]
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

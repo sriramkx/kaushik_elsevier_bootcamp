@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+    
+    function doCalc(a, b)
+    {
+
+     // alert(a);
+     // alert(b);
+
+       var c = Number(a)+Number(b);
+
+      // alert(c);
+
+       // document.getElementById("result").innerHTML = c;
+
+        document.getElementById("ip3").value = c;
+        
+
+        document.getElementById("result").innerHTML = doSquare(c);
+
+        
+    }
+
+    function doSquare(x)
+    {
+        
+        var y = x*x;
+
+        return y;
+
+        alert("test");
+
+      //  document.getElementById("result").innerHTML = y;
+    }
+    
+    </script>
+</head>
+<body>
+
+    Number 1 : <input type="text" id="ip1"> <br><br>
+
+    Number 2 : <input type="text" id="ip2"> <br><br>
+
+    Result : <input type="text" id="ip3"> <br><br>
+
+    <input type="button" value="Add" onclick="doCalc(document.getElementById('ip1').value, document.getElementById('ip2').value)">
+
+    <div id="result"></div>
+    
+</body>
+</html>

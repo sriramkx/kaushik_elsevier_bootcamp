@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>explicit coercion</title>
+    <script>
+console.clear()
+
+var mNum = 15
+console.log(typeof(String(mNum)))
+console.log(typeof(String(true)))
+console.log(typeof(String(-98.10)))
+console.log(typeof(String(null)))
+console.log(typeof(String(undefined)))
+
+// To Number
+console.log(typeof(Number('2')))
+console.log(Number(true), typeof(Number(true)))
+console.log(Number(false), typeof(Number(true)))
+console.log(Number('-90.234'), typeof(Number('-90.234')))
+console.log(Number('apple'), typeof(Number('apple')))
+
+//To Boolean
+console.log(Boolean(1), typeof(Boolean(1)))
+console.log(Boolean(0), typeof(Boolean(0)))
+console.log(Boolean('Apple'), typeof(Boolean('Apple')))
+console.log(Boolean(null), typeof(Boolean(null)))
+console.log(Boolean(undefined), typeof(Boolean(undefined)))
+console.log(Boolean(''), typeof(Boolean('')))
+
+// Answer the following questions WITHOUT executing the code in Codepen. Also, explain why do you think your answer is correct.
+// Q1. What will be printed in the console?
+// 1. String(123)       -   123 -   converts number to string.
+// 2. String(-12.3)     -   -123    -   converts number to string
+// 3. String(null)      -   null    -   converts to string
+// 4. String(undefined) -   undefined   -   converts to string.
+// 5. String(true)      -   true    -   convers to string
+// 6. String(false)     -   false   -   converts to string
+// Q2. What will be printed in the console?
+// 1. Boolean('')       -   false   -   Booleas of null is false
+// 2. Boolean('Hello')  -   true    -   Boolean of any non-null value is true.
+// 3. Boolean(0)        -   false   -   Boolean of 0 is false
+// 4. Boolean(200)      -   true    -   Boolean of any non-null value is true.
+// 5. Boolean(-0)       -   false   -   Boolean of any non-proper value is false
+// 6. Boolean(-200)     -   true    -   Boolean of any non-null value is true.
+// 7. Boolean(NaN)      -   false   -   Boolean of any non-null value is true.
+// 8. Boolean(null)     -   false   -   Boolean of any non-null value is true.
+// 9. Boolean(undefined)    -   false   -   Boolean of any non-proper value is false
+// 10. Boolean(false)   -   false
+// Q3. What will be printed in the console?
+// 1. Number(null)      -   0   -   value of null is 0
+// 2. Number(undefined) -   Nan -   undefined is not a number
+// 3. Number(true)      -   1   -   number value of true is 1
+// 4. Number(false)     -   0   -   number value of false is 0
+// 5. Number(" 12 ")    -   12  -   converts string to a number
+// 6. Number("-12.34")  -   -12.34  -   converts string to a number
+// 7. Number("\n")      -   NaN     -   new line is an empty line
+// 8. Number(" 12s ")   -   12  -   prints the number alone.
+// 9. Number(123)       -   123 -   prints the number
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

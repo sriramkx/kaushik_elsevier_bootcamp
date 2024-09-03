@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        function doCalc(op) {
+            var a = document.getElementById("ip1").value;
+            var b = document.getElementById("ip2").value;
+
+            var c;
+
+            alert(op);
+
+            switch (op) {
+
+
+
+                case "add":
+
+                    c = Number(a) + Number(b);
+
+                    break;
+
+                case "sub":
+
+                    c = a - b;
+
+                    break;
+
+                case "mul":
+
+                    c = a * b;
+                    break;
+
+                case "div":
+
+                    c = a / b;
+                    break;
+
+                default:
+
+                    c = "Something went wrong";
+
+                    
+
+
+
+
+            }
+
+            document.getElementById("result").innerHTML = c;
+
+
+
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+    Number 1 : <input type="text" id="ip1"><br><br>
+    Number 2 : <input type="text" id="ip2"><br><br>
+
+    <input type="button" value="Add" onclick="doCalc('add')">&nbsp;
+    <input type="button" value="Sub" onclick="doCalc('sub')">&nbsp;
+    <input type="button" value="Mul" onclick="doCalc('mul')">&nbsp;
+    <input type="button" value="Div" onclick="doCalc('dfdf')">&nbsp; <br><br>
+
+    Result : <span id="result"></span>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array function - filter</title>
+    <script>
+   const numArr =[1,2,3,4,5,6,7]
+
+   const resutArr = numArr.filter(item =>{
+
+    return true;
+
+
+   })
+
+   // return false
+   console.log('result arr =>', resutArr)
+
+
+   const numArr2 =[1,2,3,4,5,6,7]
+
+const resutArr2 = numArr2.filter(item =>{
+
+ return false;
+
+
+})
+
+console.log('result arr =>', resutArr2)
+
+
+// even number
+
+const numArr3 =[1,2,3,4,5,6,7]
+
+const resutArr3 = numArr3.filter(item =>{
+
+ return item%2 == 0;
+
+
+})
+
+console.log('result arr =>', resutArr3)
+
+
+// odd number
+
+const numArr4 =[1,2,3,4,5,6,7]
+
+const resutArr4 = numArr4.filter(item =>{
+
+ return item%2 !== 0;
+
+
+})
+
+console.log('result arr =>', resutArr4)
+
+// object filter method
+const numArr5 = [
+    {name:'john',experience:'it',years:2},
+    {name:'luke',experience:'dev',years:21},
+    {name:'manuel',experience:'android',years:7},
+    {name:'sam',experience:'mobile',years:9}
+
+
+]
+
+const resutArr5 = numArr5.filter(item =>{
+
+console.log(item.experience)
+
+return item.experience<10;
+
+})
+
+console.log('result arr =>', resutArr5)
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

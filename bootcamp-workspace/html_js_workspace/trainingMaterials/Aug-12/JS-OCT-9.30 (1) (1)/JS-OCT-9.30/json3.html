@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    
+</head>
+<body>
+
+
+    <div id="result">
+
+    </div>
+    
+</body>
+
+<script>
+    
+        var student = {semester1:{tamil:90, english:66, maths:85}};
+
+      //  alert(student.semester1.english);
+    
+        var res = "<ul>";
+
+        for(x in student.semester1)
+        {
+           res += "<li>"+ x +" : "+student.semester1[x]+"</li>"
+        }
+
+        res +="</ul>";
+
+        document.getElementById("result").innerHTML = res;
+    
+    
+        
+        </script>
+</html>

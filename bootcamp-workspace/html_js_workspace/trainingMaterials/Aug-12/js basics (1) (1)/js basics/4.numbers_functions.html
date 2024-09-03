@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numbers inbuilt function </title>
+    <script>
+
+
+console.clear()
+var num1 = 10;
+var num2 = 20.3;
+
+// toString() number as input and returns a string
+console.log(num1.toString())
+console.log(num2.toString())
+
+var strNum1 = "10";
+var strNum2 = "11.5";
+var strNum3 = "ABC";
+var strName = "18years";
+var strName3 = "18.5years";
+
+console.log(parseInt('22.2'));
+console.log(parseFloat(strName3));
+// parseInt() string numeral as input and returns a number
+console.log(parseInt(strNum1));
+console.log(parseInt(strNum2));
+console.log(parseInt(strNum3));
+
+// parseFloat() string numeral as an input and returns a foating
+console.log(parseFloat(num1))
+console.log(parseFloat(num2))
+
+// toFixed() takes floating number and rounds it off to given position
+
+var strFloat = 87.987653;
+console.log(strFloat.toFixed())
+console.log(strFloat.toFixed(2))
+console.log(strFloat.toFixed(5))
+console.log(strFloat.toFixed(10))
+
+
+// Q. Answer the following questions. Also, explain why do you think that your answer is correct.
+// 1. console.log(toString(100))                            -   100     -   converts int to string.
+// 2. console.log(parseInt('44'))                           -   44      -   gets the Int value from the string.
+// 3. console.log(parseInt('22.222'))                       -   22      -   gets the int value from a string that has float value.
+// 4. console.log(parseInt('Banana'))                       -   NaN     -   string does not have number.
+// 5. console.log(parseFloat(12))                           -   12      -   no decimal digits in input.
+// 6. console.log(parseFloat(13.3))                         -   13.3    -   gets float from a float value.
+// 7. var num1 = 10; console.log(num1.toFixed(2))           -   10.00   -   adds 2 decimal digits.
+// 8. var num1 = 15.456789; console.log(num1.toFixed())     -   15      -   displays upto 0 rounded off decimal value.
+// 9. var num1 = 15.456789; console.log(number.toFixed(2))  -   15.46   -   number is not declared.
+// 10. var num1 = 15.456789; console.log(num1.toFixed(3))   -   15.457  -   displays upto 3 rounded off decimal value.
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

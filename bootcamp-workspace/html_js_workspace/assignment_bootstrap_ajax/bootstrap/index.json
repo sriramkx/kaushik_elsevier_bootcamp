@@ -1,0 +1,27 @@
+{
+    "@context": "http://schema.org",
+    "@type": "Movie",
+    "name": "Thangalaan",
+    "url": "https://paytm.com/movies",
+    "genre": "action, adventure, historical",
+    "image": "https://assetscdn1.paytm.com/images/cinema/Thangalaan---05x750-e04c5ac0-5954-11ef-aad3-c7a7f3f4a5ef.jpg",
+    "inLanguage": "Tamil",
+    "duration": "PT156M",
+    "datePublished": "2024-08-15",
+    "releasedEvent": {
+        "@context": "http://schema.org",
+        "@type": "PublicationEvent",
+        "startDate": "2024-08-15",
+        "location": {
+            "@type": "Country",
+            "name": "IN"
+        }
+    },
+    "aggregateRating": {
+        "@context": "http://schema.org",
+        "@type": "AggregateRating",
+        "ratingValue": 8.8,
+        "bestRating": 10,
+        "ratingCount": 2148
+    }
+}
